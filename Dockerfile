@@ -9,7 +9,7 @@ ENV LANG=C.UTF-8
 RUN yum -y install https://dl.fedoraproject.org/pub/epel/epel-release-latest-$(rpm -E '%{rhel}').noarch.rpm
 
 # Install required package for building
-RUN yum -y install --setopt=tsflags=nodocs epel-release wget unzip uuid less bzip2 git-core inotify-tools gcc make tar
+RUN yum -y install --setopt=tsflags=nodocs epel-release wget unzip uuid less bzip2 git-core inotify-tools gcc make tar aws
 
 # Install Erlang (modify the version as you wish)
 RUN yum -y install http://packages.erlang-solutions.com/site/esl/esl-erlang/FLAVOUR_1_general/esl-erlang_${ERLANG_VERSION}~centos~7_amd64.rpm
